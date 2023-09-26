@@ -9,13 +9,6 @@ import com.example.pemensanantiket.databinding.ActivityKonfirmasiBinding
 class konfirmasi : AppCompatActivity() {
     private lateinit var binding: ActivityKonfirmasiBinding
 
-    companion object{
-        var asal = "asal"
-        var tujuan = "tujuan"
-        var tanggal = "tanggal"
-        var jam = "tahun"
-        var jenis = "menit"
-    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         binding = ActivityKonfirmasiBinding.inflate(layoutInflater)
@@ -36,7 +29,7 @@ class konfirmasi : AppCompatActivity() {
             jenisText.setText(jenis)
 
             confirmButton.setOnClickListener{
-                Toast.makeText(this@konfirmasi, "TIKET BERHASIL TERBELI", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@konfirmasi, "Berhasil membeli tiket", Toast.LENGTH_SHORT).show()
             }
 
             cancelButton.setOnClickListener{

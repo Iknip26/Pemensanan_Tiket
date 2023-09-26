@@ -12,92 +12,92 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.5"
-        />
+        app:layout_constraintGuide_percent="0.5" />
 
     <ImageView
+        android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:background="@drawable/texture"
         tools:ignore="MissingConstraints" />
 
     <ImageView
+        android:id="@+id/imageView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         android:layout_marginLeft="-30dp"
         android:layout_marginTop="-40dp"
+        android:background="@drawable/awan_shaders"
         android:rotation="180"
-        android:background="@drawable/awan_shaders"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
+        android:id="@+id/imageView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/awan_up"
         tools:ignore="MissingConstraints" />
 
     <ImageView
+        android:id="@+id/imageView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="@id/awan"
-        app:layout_constraintBottom_toBottomOf="@id/awan"
         android:layout_marginRight="-20dp"
         android:layout_marginBottom="-50dp"
-        android:background="@drawable/awan_shaders"/>
+        android:background="@drawable/awan_shaders"
+        app:layout_constraintBottom_toBottomOf="@id/awan"
+        app:layout_constraintEnd_toEndOf="@id/awan" />
 
 
     <ImageView
         android:id="@+id/awan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/awan_down"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:background="@drawable/awan_down"/>
-
+        app:layout_constraintEnd_toEndOf="parent" />
 
 
     <TextView
         android:id="@+id/tittle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="25dp"
+        android:fontFamily="sans-serif-black"
         android:text="Go Travel"
         android:textColor="@color/white"
-        android:fontFamily="sans-serif-black"
         android:textSize="64dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toTopOf="@id/bantu"
-        android:layout_marginBottom="25dp"
-        />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/desc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Travel Beyond Limit"
-        app:layout_constraintStart_toStartOf="@id/tittle"
-        app:layout_constraintEnd_toEndOf="@id/tittle"
-        app:layout_constraintTop_toBottomOf="@id/tittle"
-        android:textColor="@color/white"
+        android:layout_marginTop="-10dp"
         android:fontFamily="sans-serif"
+        android:text="Travel Beyond Limit"
+        android:textColor="@color/white"
         android:textSize="20dp"
-        android:layout_marginTop="-10dp"/>
+        app:layout_constraintEnd_toEndOf="@id/tittle"
+        app:layout_constraintStart_toStartOf="@id/tittle"
+        app:layout_constraintTop_toBottomOf="@id/tittle" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="GET STARTED"
+        android:layout_marginTop="40dp"
         android:background="@drawable/button"
-        app:layout_constraintTop_toBottomOf="@id/desc"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:paddingHorizontal="10dp"
+        android:text="GET STARTED"
         android:textColor="@color/white"
         android:textSize="20dp"
-        android:paddingHorizontal="10dp"
-        android:layout_marginTop="40dp"
-        />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/desc" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

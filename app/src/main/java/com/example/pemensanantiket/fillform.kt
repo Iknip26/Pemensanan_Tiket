@@ -1,6 +1,5 @@
 package com.example.pemensanantiket
 
-import android.annotation.SuppressLint
 import android.R
 import android.app.DatePickerDialog
 import android.app.TimePickerDialog
@@ -8,13 +7,11 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.view.ViewParent
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Toast
+import com.example.pemensanantiket.konfirmasi
 import com.example.pemensanantiket.databinding.ActivityFillformBinding
-import com.example.pemensanantiket.databinding.ActivityKonfirmasiBinding
-import java.sql.Time
 import java.text.DecimalFormat
 import java.text.SimpleDateFormat
 import java.util.*
@@ -22,10 +19,10 @@ import java.util.*
 class fillform : AppCompatActivity() {
     private lateinit var binding: ActivityFillformBinding
     private val jenis_tiket = arrayOf(
-        "Ekonomi",
-        "Bisnis",
-        "Ekksekutif",
-        "VIP"
+        "Economy",
+        "Premium Economy",
+        "Business",
+        "First Class"
     )
 
     companion object{
@@ -88,8 +85,8 @@ class fillform : AppCompatActivity() {
                 val intentback = Intent(this@fillform, homepages::class.java)
                 startActivity(intentback)
             }
-            }
         }
+    }
 
     private fun showDatePicker(){
         val datePickerDialog = DatePickerDialog(this, {DatePicker, year: Int, montOfYear: Int, dayOfMonth: Int ->
@@ -103,7 +100,7 @@ class fillform : AppCompatActivity() {
             kalender.get(Calendar.YEAR),
             kalender.get(Calendar.MONTH),
             kalender.get(Calendar.DAY_OF_MONTH)
-            )
+        )
         datePickerDialog.show()
     }
 
@@ -114,7 +111,7 @@ class fillform : AppCompatActivity() {
             timeFormat(hourOfDay, minute)
         }, jam, menit, false)
         simpleTimePicker.show()
-        }
+    }
 
     private fun timeFormat(hourOfDay: Int, minute: Int) {
         val numberFormat = DecimalFormat("00")
@@ -123,5 +120,3 @@ class fillform : AppCompatActivity() {
         binding.desc2.text = "$formatedHour : $formatedMin"
     }
 }
-
-
