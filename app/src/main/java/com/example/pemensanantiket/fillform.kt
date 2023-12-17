@@ -20,9 +20,10 @@ class fillform : AppCompatActivity() {
     private lateinit var binding: ActivityFillformBinding
     private val jenis_tiket = arrayOf(
         "Economy",
-        "Premium Economy",
+        "Premium Economys",
         "Business",
-        "First Class"
+        "First Class",
+        "VIP"
     )
 
     companion object{
